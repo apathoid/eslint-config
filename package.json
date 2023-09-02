@@ -1,0 +1,42 @@
+{
+    "name": "@apathoid/eslint-config",
+    "version": "1.0.0",
+    "description": "ESLint configuration file.",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/apathoid/eslint-config.git"
+    },
+    "type": "module",
+    "exports": {
+        ".": {
+            "import": {
+                "types": "./index.d.ts",
+                "default": "./index.js"
+            }
+        }
+    },
+    "files": [
+        "index.js",
+        "index.d.ts"
+    ],
+    "keywords": [
+        "eslint",
+        "eslintconfig",
+        "linter"
+    ],
+    "author": "apathoid",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/apathoid/eslint-config/issues"
+    },
+    "homepage": "https://github.com/apathoid/eslint-config#readme",
+    "peerDependencies": {
+        "@eslint/js": ">=8",
+        "@typescript-eslint/eslint-plugin": ">=6",
+        "globals": ">=13",
+        "eslint": ">=8"
+    },
+    "dependencies": {
+        "@typescript-eslint/parser": "^6.3.0"
+    }
+}
