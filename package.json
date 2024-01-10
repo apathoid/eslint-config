@@ -7,18 +7,21 @@
         "url": "git+https://github.com/apathoid/eslint-config.git"
     },
     "type": "module",
+    "main": "./index.cjs",
     "exports": {
-        ".": {
-            "import": {
-                "types": "./index.d.ts",
-                "default": "./index.js"
-            }
-        }
+        "import": "./index.js",
+        "require": "./index.cjs",
+        "default": "./index.cjs"
     },
     "files": [
         "index.js",
+        "index.cjs",
         "index.d.ts"
     ],
+    "scripts": {
+        "build:cjs": "babel index.js -o index.cjs",
+        "prepare": "npm run build:cjs"
+    },
     "keywords": [
         "eslint",
         "eslintconfig",
@@ -33,10 +36,15 @@
     "peerDependencies": {
         "@eslint/js": ">=8",
         "@typescript-eslint/eslint-plugin": ">=6",
-        "globals": ">=13",
-        "eslint": ">=8"
+        "eslint": ">=8",
+        "globals": ">=13"
     },
     "dependencies": {
         "@typescript-eslint/parser": "^6.3.0"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.23.4",
+        "@babel/core": "^7.23.7",
+        "@babel/plugin-transform-modules-commonjs": "^7.23.3"
     }
 }
