@@ -75,7 +75,7 @@ var _default = exports.default = [{
     "@typescript-eslint/semi": "error"
   },
   languageOptions: {
-    parser: _parser.default,
+    parser: _parser,
     parserOptions: {
       ecmaFeatures: {
         jsx: true
