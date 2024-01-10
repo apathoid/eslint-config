@@ -1,6 +1,6 @@
 {
     "name": "@apathoid/eslint-config",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "ESLint configuration file.",
     "repository": {
         "type": "git",
