@@ -10,36 +10,6 @@ var _eslintPlugin = _interopRequireDefault(require("@typescript-eslint/eslint-pl
 var _parser = _interopRequireDefault(require("@typescript-eslint/parser"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 var _default = exports.default = [{
-  files: ["**/*.js", "**/*.mjs", "**/*.cjs", "**/*.jsx"],
-  rules: {
-    ..._js.default.configs.recommended.rules
-  }
-}, {
-  files: ["**/*.ts", "**/*.tsx"],
-  plugins: {
-    "@typescript-eslint": _eslintPlugin.default
-  },
-  rules: {
-    ..._eslintPlugin.default.configs.recommended.rules,
-    "@typescript-eslint/no-unused-vars": ["error", {
-      "vars": "local",
-      "varsIgnorePattern": "^_",
-      "argsIgnorePattern": "^_",
-      "destructuredArrayIgnorePattern": "^_",
-      "caughtErrors": "none"
-    }],
-    "semi": "off",
-    "@typescript-eslint/semi": "error"
-  },
-  languageOptions: {
-    parser: _parser.default,
-    parserOptions: {
-      ecmaFeatures: {
-        jsx: true
-      }
-    }
-  }
-}, {
   languageOptions: {
     globals: {
       ..._globals.default.browser,
@@ -81,5 +51,35 @@ var _default = exports.default = [{
       "avoidEscape": true,
       "allowTemplateLiterals": true
     }]
+  }
+}, {
+  files: ["**/*.js", "**/*.mjs", "**/*.cjs", "**/*.jsx"],
+  rules: {
+    ..._js.default.configs.recommended.rules
+  }
+}, {
+  files: ["**/*.ts", "**/*.tsx"],
+  plugins: {
+    "@typescript-eslint": _eslintPlugin.default
+  },
+  rules: {
+    ..._eslintPlugin.default.configs.recommended.rules,
+    "@typescript-eslint/no-unused-vars": ["error", {
+      "vars": "local",
+      "varsIgnorePattern": "^_",
+      "argsIgnorePattern": "^_",
+      "destructuredArrayIgnorePattern": "^_",
+      "caughtErrors": "none"
+    }],
+    "semi": "off",
+    "@typescript-eslint/semi": "error"
+  },
+  languageOptions: {
+    parser: _parser.default,
+    parserOptions: {
+      ecmaFeatures: {
+        jsx: true
+      }
+    }
   }
 }];
