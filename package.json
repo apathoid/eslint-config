@@ -19,7 +19,8 @@
         "index.d.ts"
     ],
     "scripts": {
-        "build:cjs": "babel index.js -o index.cjs"
+        "build:cjs": "babel index.js -o index.cjs",
+        "prepare": "npm run build:cjs"
     },
     "keywords": [
         "eslint",
