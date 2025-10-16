@@ -57,7 +57,7 @@ export default defineConfig([
             "no-else-return": "warn",
             "no-case-declarations": "warn",
             "no-useless-escape": "warn",
-            "max-len": ["warn", 110],
+            "max-len": ["warn", 130],
             "no-return-assign": ["warn", "except-parens"],
             "no-eval": "error",
             "no-var": "warn",
