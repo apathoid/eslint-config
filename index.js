@@ -39,12 +39,18 @@ export default defineConfig([
             },
         },
         rules: {
+            "no-unused-vars": "off",
             "@typescript-eslint/no-unused-vars": ["error", {
                 "vars": "local",
                 "varsIgnorePattern": "^_",
                 "argsIgnorePattern": "^_",
                 "destructuredArrayIgnorePattern": "^_",
                 "caughtErrors": "none"
+            }],
+            "no-unused-expressions": "off",
+            "@typescript-eslint/no-unused-expressions": ["error", {
+                "allowShortCircuit": true,
+                "allowTernary": true
             }],
             "@typescript-eslint/no-empty-object-type": ["error", {
                 "allowInterfaces": "with-single-extends"
