@@ -53,6 +53,10 @@ export default defineConfig([
     },
     {
         rules: {
+            "no-unused-expressions": ["error", {
+                "allowShortCircuit": true,
+                "allowTernary": true
+            }],
             "no-empty": ["error", { "allowEmptyCatch": true }],
             "no-param-reassign": "error",
             "no-unsafe-optional-chaining": "warn",
