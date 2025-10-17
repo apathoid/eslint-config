@@ -46,6 +46,9 @@ export default defineConfig([
                 "destructuredArrayIgnorePattern": "^_",
                 "caughtErrors": "none"
             }],
+            "@typescript-eslint/no-empty-object-type": ["error", {
+                "allowInterfaces": "with-single-extends"
+            }]
         },
     },
     {
